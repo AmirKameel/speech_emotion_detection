@@ -1,0 +1,11 @@
+.navbar-default {
+  background-color: #000000; /* Replace with your desired black color code */
+  border-color: #000000;
+}
+
+.list-unstyled li {
+  color: #333; /* Replace with your desired font color */
+  font-weight: bold; /* Replace with your desired font weight */
+  font-size: 18px; /* Replace with your desired font size */
+  line-height: 1.5; /* Replace with your desired line height */
+}

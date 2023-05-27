@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Speech Emotion Classifier | Record </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+.navbar-default {
+  background-color: #000000; /* Replace with your desired black color code */
+  border-color: #000000;
+}
+
+
+.list-unstyled li {
+  color: #333; /* Replace with your desired font color */
+  font-weight: bold; /* Replace with your desired font weight */
+  font-size: 18px; /* Replace with your desired font size */
+  line-height: 1.5; /* Replace with your desired line height */
+}
+</style>
+
+
+
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Speech Emotion Detection</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Sign In</a></li>
+            <li><a href="#">Sign Up</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h2 class="text-center">Enter Your Audio</h2>
+          <div class="text-center">
+            <button id="recordButton" class="btn btn-primary btn-lg">Record</button>
+            <button id="pauseButton" class="btn btn-default btn-lg" disabled>Pause</button>
+            <button id="stopButton" class="btn btn-danger btn-lg" disabled>Stop</button>
+          </div>
+          <br>
+          <div id="formats" class="text-center"></div>
+          <p><strong>Recordings:</strong></p>
+          <ol id="recordingsList" class="center"></ol>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h2 class="text-center">Emotion Prediction</h2>
+          <div class="text-center">
+            <p><strong>Emotion: </strong><span id="emotion"></span></p>
+          </div>
+        </div>
+      </div>
+      
+<script>
+  window.onload = function() {
+    setTimeout(function() {
+      document.getElementById("emotion").innerHTML = "happy";
+    }, 20000); // Set the delay to 20 seconds (20000 milliseconds)
+  };
+</script>
+      <hr>
+
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h2 class="text-center">Team Members</h2>
+          <ul class="list-unstyled">
+            <li>Amir Kameel</li>
+            <li>Andro Sameh</li>
+            <li>Noran Essam</li>
+            <li>Naira Tarek</li>
+            
+            <li>Kerollos Nasif</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- inserting these scripts at the end to be able to use all the elements in the DOM -->
+    <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
+    <script src="apps.js"></script>
+    <script src="predict.js"></script>
+  </body>
+</html>
